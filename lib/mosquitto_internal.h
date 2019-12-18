@@ -336,6 +336,11 @@ struct mosquitto {
 #  endif
 #endif
 	uint8_t maximum_qos;
+<<<<<<< HEAD
+=======
+	uint8_t retain_available;
+	bool tcp_nodelay;
+>>>>>>> d60e86d2... Add TCP_NODELAY support to lib and clients.
 
 #ifdef WITH_BROKER
 	UT_hash_handle hh_id;
