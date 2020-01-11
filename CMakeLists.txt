@@ -23,11 +23,11 @@ endif (WIN32)
 include(GNUInstallDirs)
 
 option(WITH_TLS
-	"Include SSL/TLS support?" ON)
+	"Include SSL/TLS support?" OFF)
 option(WITH_TLS_PSK
-	"Include TLS-PSK support (requires WITH_TLS)?" ON)
+	"Include TLS-PSK support (requires WITH_TLS)?" OFF)
 option(WITH_EC
-	"Include Elliptic Curve support (requires WITH_TLS)?" ON)
+	"Include Elliptic Curve support (requires WITH_TLS)?" OFF)
 if (WITH_TLS)
 	find_package(OpenSSL REQUIRED)
 	add_definitions("-DWITH_TLS")
@@ -48,9 +48,9 @@ if (WITH_SOCKS)
 	add_definitions("-DWITH_SOCKS")
 endif (WITH_SOCKS)
 
-option(WITH_SRV "Include SRV lookup support?" OFF)
+option(WITH_SRV "Include SRV lookup support?" ON)
 
-option(WITH_STATIC_LIBRARIES "Build static versions of the libmosquitto/pp libraries?" OFF)
+option(WITH_STATIC_LIBRARIES "Build static versions of the libmosquitto/pp libraries?" ON)
 option(WITH_PIC "Build the static library with PIC (Position Independent Code) enabled archives?" OFF)
 
 option(WITH_THREADING "Include client library threading support?" ON)
@@ -77,7 +77,7 @@ else (WITH_THREADING)
 	set (PTHREAD_INCLUDE_DIR "")
 endif (WITH_THREADING)
 
-option(DOCUMENTATION "Build documentation?" ON)
+option(DOCUMENTATION "Build documentation?" OFF)
 
 option(WITH_DLT "Include DLT support?" OFF)
 message(STATUS "WITH_DLT = ${WITH_DLT}")
@@ -118,4 +118,4 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libmosquittopp.pc" DESTINATION "${CMA
 # ========================================
 # Testing
 # ========================================
-enable_testing()
+#enable_testing()
