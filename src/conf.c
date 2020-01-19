@@ -226,7 +226,7 @@ static void config__init_reload(struct mosquitto_db *db, struct mosquitto__confi
 	config->persistent_client_expiration = 0;
 	config->queue_qos0_messages = false;
 	config->retain_available = true;
-	config->set_tcp_nodelay = false;
+	config->set_tcp_nodelay = true;
 	config->sys_interval = 10;
 	config->upgrade_outgoing_qos = false;
 
