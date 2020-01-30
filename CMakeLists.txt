@@ -93,8 +93,8 @@ endif (WITH_DLT)
 # ========================================
 
 add_subdirectory(lib)
-add_subdirectory(client)
-add_subdirectory(src)
+#add_subdirectory(client)
+#add_subdirectory(src)
 if (DOCUMENTATION)
 	add_subdirectory(man)
 endif (DOCUMENTATION)
