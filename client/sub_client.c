@@ -237,13 +237,10 @@ void print_usage(void)
 	printf(" -W : Specifies a timeout in seconds how long to process incoming MQTT messages.\n");
 #endif
 	printf(" --help : display this message.\n");
-<<<<<<< HEAD
-=======
 	printf(" --nodelay : disable Nagle's algorithm, to reduce socket sending latency at the possible\n");
 	printf("             expense of more packets being sent.\n");
 	printf(" --pretty : print formatted output rather than minimised output when using the\n");
 	printf("            JSON output format option.\n");
->>>>>>> d60e86d2... Add TCP_NODELAY support to lib and clients.
 	printf(" --quiet : don't print error messages.\n");
 	printf(" --retained-only : only handle messages with the retained flag set, and exit when the\n");
 	printf("                   first non-retained message is received.\n");

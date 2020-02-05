@@ -429,12 +429,8 @@ void print_usage(void)
 	printf(" --quiet : don't print error messages.\n");
 	printf(" --repeat : if publish mode is -f, -m, or -s, then repeat the publish N times.\n");
 	printf(" --repeat-delay : if using --repeat, wait time seconds between publishes. Defaults to 0.\n");
-<<<<<<< HEAD
-	printf(" --quiet : don't print error messages.\n");
-=======
 	printf(" --unix : connect to a broker through a unix domain socket instead of a TCP socket,\n");
 	printf("          e.g. /tmp/mosquitto.sock\n");
->>>>>>> d60e86d2... Add TCP_NODELAY support to lib and clients.
 	printf(" --will-payload : payload for the client Will, which is sent by the broker in case of\n");
 	printf("                  unexpected disconnection. If not given and will-topic is set, a zero\n");
 	printf("                  length message will be sent.\n");
